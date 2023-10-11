@@ -12,12 +12,12 @@ import { RiCarLine } from 'react-icons/ri';
 import { BiDumbbell } from 'react-icons/bi';
 import { IoBagOutline } from 'react-icons/io5';
 
-import catalogue from './data';
+import { catalogue } from './data';
 
 const Navbar: React.FC = () => {
   return (
     <>
-      <div className='rounded-lg overflow-hidden shadow-md px-4 py-2 bg-white'>
+      <div className='rounded-lg overflow-hidden shadow-md px-4 py-2 bg-white mb-2'>
         <div className='border-b-gray-300 flex flex-row items-center justify-between pb-2 border-b-[1px]'>
           <span id='logo' className='text-2xl text-primary'>
             CMStore
@@ -63,35 +63,35 @@ const Navbar: React.FC = () => {
                   let icon;
                   switch (cat.icon) {
                     case 'LuCable': {
-                      icon = <LuCable size={20}/>; 
+                      icon = <LuCable size={20} />;
                       break;
                     }
                     case 'LuSofa': {
-                      icon = <LuSofa size={20}/>;
+                      icon = <LuSofa size={20} />;
                       break;
                     }
                     case 'PiPlantLight': {
-                      icon = <PiPlantLight size={20}/>;
+                      icon = <PiPlantLight size={20} />;
                       break;
                     }
                     case 'PiTShirtLight': {
-                      icon = <PiTShirtLight size={20}/>;
+                      icon = <PiTShirtLight size={20} />;
                       break;
                     }
                     case 'AiOutlineHome': {
-                      icon = <AiOutlineHome size={20}/>;
+                      icon = <AiOutlineHome size={20} />;
                       break;
                     }
                     case 'RiCarLine': {
-                      icon = <RiCarLine size={20}/>;
+                      icon = <RiCarLine size={20} />;
                       break;
                     }
                     case 'BiDumbbell': {
-                      icon = <BiDumbbell size={20}/>;
+                      icon = <BiDumbbell size={20} />;
                       break;
                     }
                     case 'IoBagOutline': {
-                      icon = <IoBagOutline size={20}/>;
+                      icon = <IoBagOutline size={20} />;
                       break;
                     }
                   }

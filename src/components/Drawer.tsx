@@ -7,7 +7,7 @@ import {
 } from '@material-tailwind/react';
 import { AiFillAppstore } from 'react-icons/ai';
 
-import catalogue from './data';
+import { catalogue } from './data';
 
 export function DrawerDefault() {
   const [open, setOpen] = React.useState(false);
@@ -17,7 +17,7 @@ export function DrawerDefault() {
 
   return (
     <React.Fragment>
-      <div className='pr-4 py-4 order-1 sm:order-none'>
+      <div className='pr-4 py-4 lg:pl-8 order-1 sm:order-none'>
         <AiFillAppstore
           size={30}
           onClick={openDrawer}
