@@ -12,8 +12,14 @@ import { catalogue } from './data';
 export function DrawerDefault() {
   const [open, setOpen] = React.useState(false);
 
-  const openDrawer = () => setOpen(true);
-  const closeDrawer = () => setOpen(false);
+  const openDrawer = () => {
+    setOpen(true);
+    document.getElementById('overlay')?.classList.remove('hidden');
+  };
+  const closeDrawer = () => {
+    setOpen(false);
+    document.getElementById('overlay')?.classList.add('hidden');
+  };
 
   return (
     <React.Fragment>
@@ -24,7 +30,7 @@ export function DrawerDefault() {
           className='cursor-pointer'
         />
       </div>
-      <Drawer open={open} onClose={closeDrawer} className='p-4'>
+      <Drawer open={open} onClose={closeDrawer} className='p-4' id='draw'>
         <div className='mb-6 flex items-center justify-between'>
           <Typography variant='h5' color='blue-gray'>
             Kataloq
@@ -57,6 +63,10 @@ export function DrawerDefault() {
           ))}
         </div>
       </Drawer>
+      <div
+        id='overlay'
+        className='hidden fixed inset-0 w-full h-full pointer-events-auto z-[9996] bg-black bg-opacity-60 backdrop-blur-sm'
+      />
     </React.Fragment>
   );
 }

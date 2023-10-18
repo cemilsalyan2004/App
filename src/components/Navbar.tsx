@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           <div className='flex flex-row items-center gap-2 sm:gap-4'>
             <AiFillHeart color='#ff0000' size={22} className='cursor-pointer' />
             <AiOutlineUser size={22} className='cursor-pointer sm:hidden' />
-            <button className='cursor-pointer bg-gray-400 px-4 py-2 rounded-xl hidden sm:block text-sm'>
+            <button className='cursor-pointer bg-gray-500 px-4 py-2 rounded-xl hidden sm:block text-sm text-white'>
               Daxil ol
             </button>
             <GrUploadOption size={20} className='cursor-pointer sm:hidden' />
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
                     }
                   }
                   return (
-                    <div className='flex flex-col items-center cursor-pointer px-2 py-3 rounded-xl hover:bg-gray-200 basis-[12.5%] md:basis-[10%] '>
+                    <div key={i} className='flex flex-col items-center cursor-pointer px-2 py-3 rounded-xl hover:bg-gray-200 basis-[12.5%] md:basis-[10%] '>
                       <div className='mb-3'>{icon}</div>
                       <span className='text-xs text-center'>{cat.name}</span>
                     </div>

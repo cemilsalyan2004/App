@@ -6,7 +6,7 @@ import Main from './pages/Main';
 
 function App() {
   return (
-    <div className='max-w-[1500px] mx-auto p-3'>
+    <div className='max-w-[1500px] mx-auto px-3 py-1'>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
