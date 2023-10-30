@@ -17,7 +17,7 @@ const AdItem: React.FC<Props> = ({ image, vip, price, description }) => {
         <GiQueenCrown
 					title='VIP'
           size={27.5}
-          className='-rotate-45 absolute -top-4 -left-3 z-50'
+          className='-rotate-45 absolute -top-4 -left-3 z-20'
 					color='#ffa500'
         />
       )}

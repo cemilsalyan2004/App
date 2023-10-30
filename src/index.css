@@ -12,3 +12,8 @@
   font-family: 'Kalam', cursive;
   font-family: 'Lobster', cursive;
 }
+
+.button_active {
+  color: #3522e3;
+  border-bottom: 2px solid currentColor;
+}

@@ -40,23 +40,23 @@ export const catalogue = [
   },
   {
     name: 'Xidmətlər',
-    icon: null,
+    icon: 'BiFork',
   },
   {
     name: 'Heyvanlar',
-    icon: null,
+    icon: 'PiDog',
   },
   {
     name: 'Biznes üçün avadanlıq',
-    icon: null,
+    icon: 'MdBusinessCenter',
   },
   {
     name: 'Uşaq dünyası',
-    icon: null,
+    icon: 'TbBabyCarriage',
   },
   {
     name: 'Tibbi məhsullar',
-    icon: null,
+    icon: 'PiFirstAidKitLight',
   },
 ];
 
@@ -131,63 +131,228 @@ export const cities = [
 
 export const ads = [
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 99.9,
-    description: '1Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
-    vip: true
+    description:
+      '1Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: true,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 79.9,
     description: '2Another product with a different price and VIP status.',
-    vip: false
+    vip: false,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 99.9,
-    description: '3Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
-    vip: false
+    description:
+      '3Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 79.9,
     description: '4Another product with a different price and VIP status.',
-    vip: true
+    vip: true,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 99.9,
-    description: '5Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
-    vip: false
+    description:
+      '5Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 79.9,
     description: '6Another product with a different price and VIP status.',
-    vip: true
+    vip: true,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 99.9,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
-    vip: true
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: true,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 79.9,
     description: 'Another product with a different price and VIP status.',
-    vip: false
+    vip: false,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 99.9,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
-    vip: false
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
   },
   {
-    image: 'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
     price: 79.9,
     description: 'Another product with a different price and VIP status.',
-    vip: true
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      '1Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: '2Another product with a different price and VIP status.',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      '3Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: '4Another product with a different price and VIP status.',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      '5Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: '6Another product with a different price and VIP status.',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: 'Another product with a different price and VIP status.',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: 'Another product with a different price and VIP status.',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      '1Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: '2Another product with a different price and VIP status.',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      '3Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: '4Another product with a different price and VIP status.',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      '5Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: '6Another product with a different price and VIP status.',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: true,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: 'Another product with a different price and VIP status.',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 99.9,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quaerat delectus eos consequuntur numquam labore facere aliquid cupiditate quisquam officia! Ex, quidem iste. Expedita voluptatem numquam ut perspiciatis in atque?',
+    vip: false,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1682687980115-a37b56ea7271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+    price: 79.9,
+    description: 'Another product with a different price and VIP status.',
+    vip: true,
   },
 ];
