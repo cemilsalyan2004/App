@@ -1,10 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import url from '../url';
+import { Spinner } from '@material-tailwind/react';
 import { useCookies } from 'react-cookie';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { displayModal } from '../store/modalSclice';
 import { createPortal } from 'react-dom';
 import { originalUrl } from '../url';
+import { category } from '../types/types';
 
 import { DrawerDefault } from './Drawer';
 import Form, { Overlay } from './form/Form';
@@ -28,8 +31,9 @@ import { CiUser } from 'react-icons/ci';
 import { MdBusinessCenter } from 'react-icons/md';
 import { TbBabyCarriage } from 'react-icons/tb';
 
-import { catalogue } from './data';
 import { RootState } from '../types/types';
+import axios from 'axios';
+import Category from './Category';
 
 const Profile: React.FC<{
   image: string;
@@ -100,6 +104,26 @@ const Navbar: React.FC = () => {
   const userName = useSelector((state: RootState) => state.userState.userName);
   const image = useSelector((state: RootState) => state.userState.image);
   const dispatch = useDispatch();
+  const [catego, setCatego] = useState<category[]>();
+  const [loading, setLoading] = useState<boolean>(false);
+  const [cookie, _, removeCookie] = useCookies();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get(`${url}/category/getCategories`)
+      .then(({ data }) => {
+        if (data.status === 'success') setCatego(data.categories);
+      })
+      .finally(() => setLoading(false));
+  }, []);
+
+  const addPost = (e: React.MouseEvent) => {
+    if (!cookie.jwt) dispatch(displayModal());
+    else navigate('add');
+  };
+
   return (
     <>
       <div className='rounded-lg overflow-hidden shadow-md px-4 py-2 bg-white mb-2'>
@@ -118,7 +142,8 @@ const Navbar: React.FC = () => {
               }}
               onBlur={(e) => {
                 e.target.placeholder = '     Axtar';
-                (e.target.nextSibling as SVGAElement).style.display = 'block';
+                if (e.target.value.length === 0)
+                  (e.target.nextSibling as SVGAElement).style.display = 'block';
               }}
             />
             <GoSearch
@@ -132,25 +157,33 @@ const Navbar: React.FC = () => {
             {userName ? (
               <Profile image={image!} userName={userName} mobile={true} />
             ) : (
-              <AiOutlineUser size={22} className='cursor-pointer sm:hidden' />
+              <AiOutlineUser
+                size={22}
+                className='cursor-pointer sm:hidden'
+                onClick={() => dispatch(displayModal())}
+              />
             )}
             {userName ? (
               <Profile image={image!} userName={userName} mobile={false} />
             ) : (
               <button
-                className='cursor-pointer bg-gray-500 px-4 py-2 rounded-xl hidden sm:block text-sm text-white'
+                className='cursor-pointer bg-gray-500 px-4 py-2 rounded-xl hidden sm:block text-sm text-white whitespace-nowrap'
                 onClick={() => dispatch(displayModal())}
               >
                 Daxil ol
               </button>
             )}
-            <GrUploadOption size={20} className='cursor-pointer sm:hidden' />
-            <Link
-              to={'add'}
+            <GrUploadOption
+              size={20}
+              className='cursor-pointer sm:hidden'
+              onClick={addPost}
+            />
+            <button
+              onClick={addPost}
               className='cursor-pointer bg-primary text-white px-4 py-2 rounded-xl hidden sm:block text-sm whitespace-nowrap'
             >
               Elan yerləşdir
-            </Link>
+            </button>
           </div>
         </div>
         {modal &&
@@ -187,74 +220,77 @@ const Navbar: React.FC = () => {
           <div className='flex flex-row items-center'>
             <DrawerDefault />
             <div className='w-full mt-4 hidden md:flex flex-row flex-nowrap gap-2 justify-center md:gap-4 lg:gap-6 xl:gap-6'>
-              {catalogue.map((cat, i) => {
-                if (i < 20) {
-                  let icon;
-                  switch (cat.icon) {
-                    case 'LuCable': {
-                      icon = <LuCable size={20} />;
-                      break;
+              {loading ? (
+                <Spinner />
+              ) : (
+                catego?.map((cat, i) => {
+                  if (i < 8) {
+                    let icon;
+                    switch (cat.icon) {
+                      case 'LuCable': {
+                        icon = <LuCable size={20} />;
+                        break;
+                      }
+                      case 'LuSofa': {
+                        icon = <LuSofa size={20} />;
+                        break;
+                      }
+                      case 'PiPlantLight': {
+                        icon = <PiPlantLight size={20} />;
+                        break;
+                      }
+                      case 'PiTShirtLight': {
+                        icon = <PiTShirtLight size={20} />;
+                        break;
+                      }
+                      case 'AiOutlineHome': {
+                        icon = <AiOutlineHome size={20} />;
+                        break;
+                      }
+                      case 'RiCarLine': {
+                        icon = <RiCarLine size={20} />;
+                        break;
+                      }
+                      case 'BiDumbbell': {
+                        icon = <BiDumbbell size={20} />;
+                        break;
+                      }
+                      case 'IoBagOutline': {
+                        icon = <IoBagOutline size={20} />;
+                        break;
+                      }
+                      case 'BiFork': {
+                        icon = <BiFork size={25} />;
+                        break;
+                      }
+                      case 'PiDog': {
+                        icon = <PiDog size={25} />;
+                        break;
+                      }
+                      case 'MdBusinessCenter': {
+                        icon = <MdBusinessCenter size={25} />;
+                        break;
+                      }
+                      case 'TbBabyCarriage': {
+                        icon = <TbBabyCarriage size={25} />;
+                        break;
+                      }
+                      case 'PiFirstAidKitLight': {
+                        icon = <PiFirstAidKitLight size={25} />;
+                        break;
+                      }
                     }
-                    case 'LuSofa': {
-                      icon = <LuSofa size={20} />;
-                      break;
-                    }
-                    case 'PiPlantLight': {
-                      icon = <PiPlantLight size={20} />;
-                      break;
-                    }
-                    case 'PiTShirtLight': {
-                      icon = <PiTShirtLight size={20} />;
-                      break;
-                    }
-                    case 'AiOutlineHome': {
-                      icon = <AiOutlineHome size={20} />;
-                      break;
-                    }
-                    case 'RiCarLine': {
-                      icon = <RiCarLine size={20} />;
-                      break;
-                    }
-                    case 'BiDumbbell': {
-                      icon = <BiDumbbell size={20} />;
-                      break;
-                    }
-                    case 'IoBagOutline': {
-                      icon = <IoBagOutline size={20} />;
-                      break;
-                    }
-                    case 'BiFork': {
-                      icon = <BiFork size={25} />;
-                      break;
-                    }
-                    case 'PiDog': {
-                      icon = <PiDog size={25} />;
-                      break;
-                    }
-                    case 'MdBusinessCenter': {
-                      icon = <MdBusinessCenter size={25} />;
-                      break;
-                    }
-                    case 'TbBabyCarriage': {
-                      icon = <TbBabyCarriage size={25} />;
-                      break;
-                    }
-                    case 'PiFirstAidKitLight': {
-                      icon = <PiFirstAidKitLight size={25} />;
-                      break;
-                    }
+                    return (
+                      <Category
+                        key={i}
+                        icon={icon}
+                        type={cat.type}
+                        _id={cat._id}
+                      />
+                    );
                   }
-                  return (
-                    <div
-                      key={i}
-                      className='flex flex-col items-center cursor-pointer px-2 py-3 rounded-xl hover:bg-gray-200 basis-[12.5%] md:basis-[10%] '
-                    >
-                      <div className='mb-3'>{icon}</div>
-                      <span className='text-xs text-center'>{cat.name}</span>
-                    </div>
-                  );
-                }
-              })}
+                })
+              )}
             </div>
           </div>
         </div>

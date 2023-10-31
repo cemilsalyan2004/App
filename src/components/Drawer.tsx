@@ -1,15 +1,24 @@
-import React from 'react';
-import {
-  Drawer,
-  Button,
-  Typography,
-  IconButton,
-} from '@material-tailwind/react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import url from '../url';
+import { Spinner } from '@material-tailwind/react';
+import { category } from '../types/types';
+import { Drawer, Typography, IconButton } from '@material-tailwind/react';
 import { AiFillAppstore } from 'react-icons/ai';
 
-import { catalogue } from './data';
-
 export function DrawerDefault() {
+  const [catego, setCatego] = useState<category[]>();
+  const [loading, setLoading] = useState<boolean>(false);
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get(`${url}/category/getCategories`)
+      .then(({ data }) => {
+        if (data.status === 'success') setCatego(data.categories);
+      })
+      .finally(() => setLoading(false));
+  }, []);
+
   const [open, setOpen] = React.useState(false);
 
   const openDrawer = () => {
@@ -27,7 +36,7 @@ export function DrawerDefault() {
         <AiFillAppstore
           size={30}
           onClick={openDrawer}
-          className='cursor-pointer'
+          className='cursor-pointer m-3'
         />
       </div>
       <Drawer open={open} onClose={closeDrawer} className='p-4' id='draw'>
@@ -53,14 +62,18 @@ export function DrawerDefault() {
           </IconButton>
         </div>
         <div className='flex gap-2 flex-col'>
-          {catalogue.map((cat, index) => (
-            <div
-              className='border-2 px-2 py-1 rounded-lg cursor-pointer hover:bg-gray-200'
-              key={index}
-            >
-              {cat.name}
-            </div>
-          ))}
+          {loading ? (
+            <Spinner />
+          ) : (
+            catego?.map((cat, index) => (
+              <div
+                className='border-2 px-2 py-1 rounded-lg cursor-pointer hover:bg-gray-200'
+                key={index}
+              >
+                {cat.type}
+              </div>
+            ))
+          )}
         </div>
       </Drawer>
       <div

@@ -7,55 +7,55 @@ import { IoBagOutline } from 'react-icons/io5';
 
 export const catalogue = [
   {
-    name: 'Elektronika',
+    type: 'Elektronika',
     icon: 'LuCable',
   },
   {
-    name: 'Mebel',
+    type: 'Mebel',
     icon: 'LuSofa',
   },
   {
-    name: 'Ev və bağ',
+    type: 'Ev və bağ',
     icon: 'PiPlantLight',
   },
   {
-    name: 'Daşınmaz əmlak',
+    type: 'Daşınmaz əmlak',
     icon: 'AiOutlineHome',
   },
   {
-    name: 'Nəqliyyat',
+    type: 'Nəqliyyat',
     icon: 'RiCarLine',
   },
   {
-    name: 'İdman və hobbi',
+    type: 'İdman və hobbi',
     icon: 'BiDumbbell',
   },
   {
-    name: 'Şəxsi əşyalar',
+    type: 'Şəxsi əşyalar',
     icon: 'PiTShirtLight',
   },
   {
-    name: 'İş',
+    type: 'İş',
     icon: 'IoBagOutline',
   },
   {
-    name: 'Xidmətlər',
+    type: 'Xidmətlər',
     icon: 'BiFork',
   },
   {
-    name: 'Heyvanlar',
+    type: 'Heyvanlar',
     icon: 'PiDog',
   },
   {
-    name: 'Biznes üçün avadanlıq',
+    type: 'Biznes üçün avadanlıq',
     icon: 'MdBusinessCenter',
   },
   {
-    name: 'Uşaq dünyası',
+    type: 'Uşaq dünyası',
     icon: 'TbBabyCarriage',
   },
   {
-    name: 'Tibbi məhsullar',
+    type: 'Tibbi məhsullar',
     icon: 'PiFirstAidKitLight',
   },
 ];

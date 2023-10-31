@@ -6,3 +6,9 @@ export interface RootState {
   };
   userState: initialUserState;
 }
+
+export interface category {
+  _id: string;
+  type: string;
+  icon: string;
+}
