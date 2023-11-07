@@ -3,7 +3,7 @@ import url from '../url';
 import { Spinner } from '@material-tailwind/react';
 import { useCookies } from 'react-cookie';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { displayModal } from '../store/modalSclice';
 import { createPortal } from 'react-dom';
 import { originalUrl } from '../url';
@@ -74,7 +74,7 @@ const Profile: React.FC<{
         </span>
         <AiOutlineDown size={12.5} />
       </div>
-      <div className='hidden absolute z-40 bg-gray-100 pl-6 pr-8 pt-6 pb-4 shadow-lg rounded-lg'>
+      <div className='hidden absolute z-40 bg-gray-100 px-2 py-4 shadow-lg rounded-lg'>
         <ul className='flex flex-col gap-2'>
           <li className='flex items-center gap-2 hover:bg-gray-300 px-4 py-2 rounded-md cursor-pointer'>
             <CiUser size={18} />
@@ -128,9 +128,9 @@ const Navbar: React.FC = () => {
     <>
       <div className='rounded-lg overflow-hidden shadow-md px-4 py-2 bg-white mb-2'>
         <div className='border-b-gray-300 flex flex-row items-center justify-between border-b-[1px] py-4 px-4'>
-          <span id='logo' className='text-2xl text-primary'>
+          <Link to='/' id='logo' className='text-2xl text-primary'>
             CMStore
-          </span>
+          </Link>
           <div className='relative w-full mx-6 hidden md:block'>
             <input
               type='text'
@@ -282,7 +282,7 @@ const Navbar: React.FC = () => {
                     }
                     return (
                       <Category
-                        key={i}
+                        key={cat._id}
                         icon={icon}
                         type={cat.type}
                         _id={cat._id}
