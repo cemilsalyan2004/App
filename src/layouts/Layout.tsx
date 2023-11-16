@@ -17,7 +17,6 @@ const Layout: React.FC = () => {
       axios
         .post(`${url}/users`, {}, { withCredentials: true })
         .then(({ data }) => {
-          console.log(data.user);
           if (data.status === 'success')
             dispatch(
               addUser({

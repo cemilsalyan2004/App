@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className='rounded-lg overflow-hidden shadow-md px-4 py-2 bg-white mb-2'>
+      <div className='rounded-lg overflow-hidden shadow-md px-4 py-2 bg-white mb-2 xl:px-20'>
         <div className='border-b-gray-300 flex flex-row items-center justify-between border-b-[1px] py-4 px-4'>
           <Link to='/' id='logo' className='text-2xl text-primary'>
             CMStore

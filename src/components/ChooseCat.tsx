@@ -18,7 +18,10 @@ import { IoBagOutline } from 'react-icons/io5';
 import { MdBusinessCenter } from 'react-icons/md';
 import { TbBabyCarriage } from 'react-icons/tb';
 
-export function ChooseCat() {
+const ChooseCat: React.FC<{
+  chooseCategory: (_id: string) => void;
+}> = ({ chooseCategory }) => {
+  const [name, setName] = useState<string>('seçmək');
   const [catego, setCatego] = useState<category[]>();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
@@ -36,7 +39,7 @@ export function ChooseCat() {
         type='button'
         className='block border-primary/50 border-2 px-3 py-2 rounded-lg text-sm bg-primary/20 text-blue-900 hover:bg-primary/70 hover:text-white'
       >
-        seçmək
+        {name}
       </button>
       <Dialog
         open={open}
@@ -103,6 +106,11 @@ export function ChooseCat() {
             <div
               className='flex flex-col items-center hover:bg-gray-300 py-4 gap-2 justify-center rounded-lg cursor-pointer'
               key={cat._id}
+              onClick={() => {
+                chooseCategory(cat._id);
+                setName(cat.type);
+                handleOpen();
+              }}
             >
               {icon}
               <p>{cat.type}</p>
@@ -112,4 +120,6 @@ export function ChooseCat() {
       </Dialog>
     </>
   );
-}
+};
+
+export default ChooseCat;
