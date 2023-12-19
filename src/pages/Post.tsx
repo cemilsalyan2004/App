@@ -9,7 +9,6 @@ import { MdPhotoCamera } from 'react-icons/md';
 import { FiPhone } from 'react-icons/fi';
 
 const Post: React.FC = () => {
-  // const [images, setImages] = useState<File[]>([]);
   const imageRef = useRef<HTMLInputElement>(null);
 
   const [cities, setCities] = useState<category[]>();
@@ -108,11 +107,11 @@ const Post: React.FC = () => {
           Qiymət
         </label>
         <input
-          type='text'
+          type='number'
           id='price'
           name='price'
           placeholder='&#8380;'
-          className='border-gray-400 border py-2 px-3 block rounded-lg outline-none focus:border-primary w-[288px]'
+          className='border-gray-400 border py-2 px-3 block rounded-lg outline-none focus:border-primary w-[288px] removeArrows'
           onChange={(e) => setPrice(e.target.value)}
         />
         <label htmlFor='number' className='inline-block mb-3 mt-6'>

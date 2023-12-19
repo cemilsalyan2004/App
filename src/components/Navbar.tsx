@@ -125,177 +125,175 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <>
-      <div className='rounded-lg overflow-hidden shadow-md px-4 py-2 bg-white mb-2 xl:px-20'>
-        <div className='border-b-gray-300 flex flex-row items-center justify-between border-b-[1px] py-4 px-4'>
-          <Link to='/' id='logo' className='text-2xl text-primary'>
-            CMStore
-          </Link>
-          <div className='relative w-full mx-6 hidden md:block'>
-            <input
-              type='text'
-              placeholder='     Axtar'
-              className='border-[1px] border-gray-400 outline-none w-full px-2 py-1 rounded-lg'
-              onFocus={(e) => {
-                e.target.placeholder = 'Axtar';
-                (e.target.nextSibling as SVGAElement).style.display = 'none';
-              }}
-              onBlur={(e) => {
-                e.target.placeholder = '     Axtar';
-                if (e.target.value.length === 0)
-                  (e.target.nextSibling as SVGAElement).style.display = 'block';
-              }}
-            />
-            <GoSearch
-              color='#bdbdbd'
-              size={22}
-              className='absolute top-1/2 -translate-y-1/2 ml-2'
-            />
-          </div>
-          <div className='flex flex-row items-center gap-2 sm:gap-4'>
-            <AiFillHeart color='#ff0000' size={22} className='cursor-pointer' />
-            {userName ? (
-              <Profile image={image!} userName={userName} mobile={true} />
-            ) : (
-              <AiOutlineUser
-                size={22}
-                className='cursor-pointer sm:hidden'
-                onClick={() => dispatch(displayModal())}
-              />
-            )}
-            {userName ? (
-              <Profile image={image!} userName={userName} mobile={false} />
-            ) : (
-              <button
-                className='cursor-pointer bg-gray-500 px-4 py-2 rounded-xl hidden sm:block text-sm text-white whitespace-nowrap'
-                onClick={() => dispatch(displayModal())}
-              >
-                Daxil ol
-              </button>
-            )}
-            <GrUploadOption
-              size={20}
-              className='cursor-pointer sm:hidden'
-              onClick={addPost}
-            />
-            <button
-              onClick={addPost}
-              className='cursor-pointer bg-primary text-white px-4 py-2 rounded-xl hidden sm:block text-sm whitespace-nowrap'
-            >
-              Elan yerləşdir
-            </button>
-          </div>
-        </div>
-        {modal &&
-          createPortal(
-            <Form />,
-            document.getElementById('form') as HTMLDivElement
-          )}
-        {modal &&
-          createPortal(
-            <Overlay />,
-            document.getElementById('overlay') as HTMLDivElement
-          )}
-        <div className='border-gray-300 pt-2 sm:pt-0 flex flex-row justify-between items-center md:block'>
-          <div className='relative w-full order-2 md:hidden'>
-            <input
-              type='text'
-              placeholder='     Axtar'
-              className='border-[1px] border-gray-400 outline-none w-full px-2 py-1 rounded-lg'
-              onFocus={(e) => {
-                e.target.placeholder = 'Axtar';
-                (e.target.nextSibling as SVGAElement).style.display = 'none';
-              }}
-              onBlur={(e) => {
-                e.target.placeholder = '     Axtar';
+    <div className='rounded-lg overflow-hidden shadow-md px-4 py-2 bg-white mb-2 xl:px-28'>
+      <div className='border-b-gray-300 flex flex-row items-center justify-between border-b-[1px] py-4 px-4'>
+        <Link to='/' id='logo' className='text-2xl text-primary'>
+          CMStore
+        </Link>
+        <div className='relative w-full mx-6 hidden md:block'>
+          <input
+            type='text'
+            placeholder='     Axtar'
+            className='border-[1px] border-gray-400 outline-none w-full px-2 py-1 rounded-lg'
+            onFocus={(e) => {
+              e.target.placeholder = 'Axtar';
+              (e.target.nextSibling as SVGAElement).style.display = 'none';
+            }}
+            onBlur={(e) => {
+              e.target.placeholder = '     Axtar';
+              if (e.target.value.length === 0)
                 (e.target.nextSibling as SVGAElement).style.display = 'block';
-              }}
-            />
-            <GoSearch
-              color='#bdbdbd'
+            }}
+          />
+          <GoSearch
+            color='#bdbdbd'
+            size={22}
+            className='absolute top-1/2 -translate-y-1/2 ml-2'
+          />
+        </div>
+        <div className='flex flex-row items-center gap-2 sm:gap-4'>
+          <AiFillHeart color='#ff0000' size={22} className='cursor-pointer' />
+          {userName ? (
+            <Profile image={image!} userName={userName} mobile={true} />
+          ) : (
+            <AiOutlineUser
               size={22}
-              className='absolute top-1/2 -translate-y-1/2 ml-2'
+              className='cursor-pointer sm:hidden'
+              onClick={() => dispatch(displayModal())}
             />
-          </div>
-          <div className='flex flex-row items-center'>
-            <DrawerDefault />
-            <div className='w-full mt-4 hidden md:flex flex-row flex-nowrap gap-2 justify-center md:gap-4 lg:gap-6 xl:gap-6'>
-              {loading ? (
-                <Spinner />
-              ) : (
-                catego?.map((cat, i) => {
-                  if (i < 8) {
-                    let icon;
-                    switch (cat.icon) {
-                      case 'LuCable': {
-                        icon = <LuCable size={20} />;
-                        break;
-                      }
-                      case 'LuSofa': {
-                        icon = <LuSofa size={20} />;
-                        break;
-                      }
-                      case 'PiPlantLight': {
-                        icon = <PiPlantLight size={20} />;
-                        break;
-                      }
-                      case 'PiTShirtLight': {
-                        icon = <PiTShirtLight size={20} />;
-                        break;
-                      }
-                      case 'AiOutlineHome': {
-                        icon = <AiOutlineHome size={20} />;
-                        break;
-                      }
-                      case 'RiCarLine': {
-                        icon = <RiCarLine size={20} />;
-                        break;
-                      }
-                      case 'BiDumbbell': {
-                        icon = <BiDumbbell size={20} />;
-                        break;
-                      }
-                      case 'IoBagOutline': {
-                        icon = <IoBagOutline size={20} />;
-                        break;
-                      }
-                      case 'BiFork': {
-                        icon = <BiFork size={25} />;
-                        break;
-                      }
-                      case 'PiDog': {
-                        icon = <PiDog size={25} />;
-                        break;
-                      }
-                      case 'MdBusinessCenter': {
-                        icon = <MdBusinessCenter size={25} />;
-                        break;
-                      }
-                      case 'TbBabyCarriage': {
-                        icon = <TbBabyCarriage size={25} />;
-                        break;
-                      }
-                      case 'PiFirstAidKitLight': {
-                        icon = <PiFirstAidKitLight size={25} />;
-                        break;
-                      }
+          )}
+          {userName ? (
+            <Profile image={image!} userName={userName} mobile={false} />
+          ) : (
+            <button
+              className='cursor-pointer bg-gray-500 px-4 py-2 rounded-xl hidden sm:block text-sm text-white whitespace-nowrap'
+              onClick={() => dispatch(displayModal())}
+            >
+              Daxil ol
+            </button>
+          )}
+          <GrUploadOption
+            size={20}
+            className='cursor-pointer sm:hidden'
+            onClick={addPost}
+          />
+          <button
+            onClick={addPost}
+            className='cursor-pointer bg-primary text-white px-4 py-2 rounded-xl hidden sm:block text-sm whitespace-nowrap'
+          >
+            Elan yerləşdir
+          </button>
+        </div>
+      </div>
+      {modal &&
+        createPortal(
+          <Form />,
+          document.getElementById('form') as HTMLDivElement
+        )}
+      {modal &&
+        createPortal(
+          <Overlay />,
+          document.getElementById('overlay') as HTMLDivElement
+        )}
+      <div className='border-gray-300 pt-2 sm:pt-0 flex flex-row justify-between items-center px-2 py-2 md:block xl:my-8 xl:bg-purple-200/50 rounded-xl'>
+        <div className='relative w-full order-2 md:hidden'>
+          <input
+            type='text'
+            placeholder='     Axtar'
+            className='border-[1px] border-gray-400 outline-none w-full px-2 py-1 rounded-lg'
+            onFocus={(e) => {
+              e.target.placeholder = 'Axtar';
+              (e.target.nextSibling as SVGAElement).style.display = 'none';
+            }}
+            onBlur={(e) => {
+              e.target.placeholder = '     Axtar';
+              (e.target.nextSibling as SVGAElement).style.display = 'block';
+            }}
+          />
+          <GoSearch
+            color='#bdbdbd'
+            size={22}
+            className='absolute top-1/2 -translate-y-1/2 ml-2'
+          />
+        </div>
+        <div className='flex flex-row items-center'>
+          <DrawerDefault />
+          <div className='w-full mt-4 hidden md:flex flex-row flex-nowrap gap-2 justify-center md:gap-4 lg:gap-6 xl:gap-6'>
+            {loading ? (
+              <Spinner />
+            ) : (
+              catego?.map((cat, i) => {
+                if (i < 8) {
+                  let icon;
+                  switch (cat.icon) {
+                    case 'LuCable': {
+                      icon = <LuCable size={20} />;
+                      break;
                     }
-                    return (
-                      <Category
-                        key={cat._id}
-                        icon={icon}
-                        type={cat.type}
-                        _id={cat._id}
-                      />
-                    );
+                    case 'LuSofa': {
+                      icon = <LuSofa size={20} />;
+                      break;
+                    }
+                    case 'PiPlantLight': {
+                      icon = <PiPlantLight size={20} />;
+                      break;
+                    }
+                    case 'PiTShirtLight': {
+                      icon = <PiTShirtLight size={20} />;
+                      break;
+                    }
+                    case 'AiOutlineHome': {
+                      icon = <AiOutlineHome size={20} />;
+                      break;
+                    }
+                    case 'RiCarLine': {
+                      icon = <RiCarLine size={20} />;
+                      break;
+                    }
+                    case 'BiDumbbell': {
+                      icon = <BiDumbbell size={20} />;
+                      break;
+                    }
+                    case 'IoBagOutline': {
+                      icon = <IoBagOutline size={20} />;
+                      break;
+                    }
+                    case 'BiFork': {
+                      icon = <BiFork size={25} />;
+                      break;
+                    }
+                    case 'PiDog': {
+                      icon = <PiDog size={25} />;
+                      break;
+                    }
+                    case 'MdBusinessCenter': {
+                      icon = <MdBusinessCenter size={25} />;
+                      break;
+                    }
+                    case 'TbBabyCarriage': {
+                      icon = <TbBabyCarriage size={25} />;
+                      break;
+                    }
+                    case 'PiFirstAidKitLight': {
+                      icon = <PiFirstAidKitLight size={25} />;
+                      break;
+                    }
                   }
-                })
-              )}
-            </div>
+                  return (
+                    <Category
+                      key={cat._id}
+                      icon={icon}
+                      type={cat.type}
+                      _id={cat._id}
+                    />
+                  );
+                }
+              })
+            )}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

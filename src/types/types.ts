@@ -1,10 +1,12 @@
 import { initialUserState } from '../store/userSlice';
+import { initialSliderState } from '../store/sliderSlice';
 
 export interface RootState {
   modalState: {
     modal: boolean;
   };
   userState: initialUserState;
+  sliderState: initialSliderState;
 }
 
 export interface category {
@@ -29,7 +31,14 @@ export interface Post {
   image: string[];
   price: number;
   desc: string;
-  category: string;
-  city: string;
+  category: {
+    _id: string;
+    type: string;
+    icon: string;
+  };
+  city: {
+    _id: string;
+    type: string;
+  };
   created: Date;
 }

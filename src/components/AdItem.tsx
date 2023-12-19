@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import url from '../url';
 import { originalUrl } from '../url';
 import { FaRegUserCircle } from 'react-icons/fa';
@@ -20,8 +21,13 @@ const AdItem: React.FC<Post> = ({
   profile,
   showNumber,
 }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className='border border-blue-gray-200 relative rounded-lg cursor-pointer hover:shadow-lg '>
+    <div
+      className='border border-blue-gray-200 relative rounded-lg cursor-pointer hover:shadow-lg'
+      onClick={() => navigate(`product/${_id}`)}
+    >
       {/* {vip && (
         <GiQueenCrown
           title='VIP'
@@ -38,7 +44,9 @@ const AdItem: React.FC<Post> = ({
         />
       </div>
       <div className='px-2 pb-2'>
-        <div className='mt-2 font-semibold text-lg line-clamp-1'>{price} AZN</div>
+        <div className='mt-2 font-semibold text-lg line-clamp-1'>
+          {price} AZN
+        </div>
         <div className='line-clamp-1 mt-1 italic text-sm'>{desc}</div>
         <div className='mt-3 flex items-center justify-between px-1'>
           <div className='aspect-square rounded-full overflow-hidden w-[30px]'>

@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Main from './pages/Main';
 import Post from './pages/Post';
+import Product from './pages/Product';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
           <Route path='add' element={<Post />} />
+          <Route path='product/:id' element={<Product />} />
         </Route>
       </Routes>
     </div>

@@ -17,3 +17,13 @@
   color: #3522e3;
   border-bottom: 2px solid currentColor;
 }
+
+.removeArrows {
+  -moz-appearance: textfield;
+}
+
+.removeArrows::-webkit-inner-spin-button,
+.removeArrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
